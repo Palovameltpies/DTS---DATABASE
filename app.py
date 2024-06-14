@@ -3,7 +3,7 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "webtags.db"
+DATABASE = ""
 
 def create_connection(db_file):
     try:
@@ -21,23 +21,23 @@ def render_home():
 
 @app.route('/black')
 def render_black():
-    pass
+    return render_template('black.html')
 
 @app.route('/blue')
 def render_blue():
-    pass
+    return render_template('blue.html')
 
 @app.route('/red')
 def render_red():
-    pass
+    return render_template('red.html')
 
 @app.route('/green')
 def render_green():
-    pass
+    return render_template('green.html')
 
 @app.route('/white')
 def render_white():
-    pass
+    return render_template('white.html')
 
 
 
