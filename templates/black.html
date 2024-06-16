@@ -1,13 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
 {% extends 'base.html' %}
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 {% block main %}
-{% endblock %}
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Power</td>
+                <td>Toughness</td>
+                <td>Stock</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
 
-</body>
-</html>
+            {% for row in data %}
+                <tr>
+                    <td>  {{  row[0] }}  </td>
+                    <td>  {{  row[1] }}  </td>
+                    <td>  {{  row[2] }}  </td>
+                    <td>  {{  row[3] }}  </td>
+                    <td>  {{  row[4] }}  </td>
+                    <td>  ${{  row[5] }}</td>
+                </tr>
+            {% endfor %}
+
+        </tbody>
+    </table>
+{% endblock %}

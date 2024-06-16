@@ -35,6 +35,8 @@
 	background-color:#909090;
 
 }
+
+
 #page2{
 	position:absolute;
 	top:640px;
@@ -71,6 +73,29 @@ a:hover {
 	transition-timing-function: ease-in-out;
 }
 
+ table {
+     border: 2px solid #ffffff;
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ th, td {
+
+     border: 1px solid #ffffff;
+     padding: 5px;
+	 font-size: 25px;
+ }
+
+ th {
+     color: #000000;
+     background-color: #999999;
+ }
+ form {
+    color: #dddddd;
+    text-decoration: none;
+     font-weight: bold;
+
+ }
 
 
 

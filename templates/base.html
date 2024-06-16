@@ -9,20 +9,26 @@
 
 <body style="background-color: #494848">
     <div class="header">
-        <a href = "">Dragons Keep</a>
+        <a href = "/">Dragons Keep</a>
     </div>
 
     <div id="Nav">
-        <a href = "">Collection</a>
+        <a href = "collection">Collection</a>
         <a href = "black">Black</a>
         <a href = "blue">Blue</a>
         <a href = "green">Green</a>
         <a href = "white">White</a>
         <a href = "red">Red</a>
     </div>
-
+    <start>
+        {% block start %}
+        {% endblock %}
+    </start>
     <div id="page1">
-
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
     </div>
 
     <div id="page2">
@@ -32,9 +38,5 @@
     <div id="page3">
 
     </div>
-    <main>
-        {% block main %}
-        {% endblock %}
-    </main>
 </body>
 </html>
