@@ -3,7 +3,7 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "MTG_Database.sqlite"
+DATABASE = "identifier.sqlite"
 
 def create_connection(db_file):
     try:
@@ -90,7 +90,7 @@ def render_collection():
     data_list = cursor.fetchall()
     print(data_list)
 
-    return render_template('collection.html', data=data_list)
+    return render_template('full_collection.html', data=data_list)
 
 if __name__ == '__main__':
     app.run()

@@ -60,6 +60,18 @@
 	background-color:#909090;
 }
 
+#collection_table{
+	position:relative;
+	top:10px;
+	left:0;
+	width:99%;
+	height:relative;
+	z-index:1;
+	margin:auto;
+	border:#636363 2px solid;
+	background-color:#909090;
+}
+
 
 a {
   	font-family:Georgia;
@@ -96,6 +108,5 @@ a:hover {
      font-weight: bold;
 
  }
-
 
 
