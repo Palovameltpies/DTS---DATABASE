@@ -81,6 +81,7 @@ def render_white():
 
 
 @app.route('/collection')
+
 def render_collection():
     query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE"
     connection = create_connection(DATABASE)
