@@ -15,7 +15,8 @@ def create_connection(db_file):
 
 @app.route('/')
 def render_home():
-    return render_template('base.html')
+
+    return render_template('home.html')
 
 
 

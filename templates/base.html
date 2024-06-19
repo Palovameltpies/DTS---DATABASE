@@ -9,10 +9,10 @@
 
 <body style="background-color: #494848">
     <div class="header">
-        <a href = "/">Dragons Keep</a>
         <form method="post" action="/search">
-            <input type="text" name="Search" id="searchbox">
-            <input type="submit" value="Search!">
+            <a href = "/">Dragons Keep</a>
+            <input type="text" name="Search" id="searchbar">
+            <input type="submit" value="Search!" id="searchbar">
         </form>
     </div>
 
@@ -23,7 +23,7 @@
         <a href = "blue">Blue</a>
         <a href = "green">Green</a>
         <a href = "white">White</a>
-        <a href = "red">Red</a>
+        <a href = "red"> <img src="/static/images/red.png"></a>
 
     </div>
 
@@ -37,14 +37,6 @@
         {% block main %}
         {% endblock %}
     </main>
-    </div>
-
-    <div id="page2">
-
-    </div>
-
-    <div id="page3">
-
     </div>
 </body>
 </html>
