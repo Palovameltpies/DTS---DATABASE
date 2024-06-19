@@ -10,7 +10,12 @@
 <body style="background-color: #494848">
     <div class="header">
         <a href = "/">Dragons Keep</a>
+        <form method="post" action="/search">
+            <input type="text" name="Search" id="searchbox">
+            <input type="submit" value="Search!">
+        </form>
     </div>
+
 
     <div id="Nav">
         <a href = "collection">Collection</a>
@@ -19,7 +24,9 @@
         <a href = "green">Green</a>
         <a href = "white">White</a>
         <a href = "red">Red</a>
+
     </div>
+
 
     <start>
         {% block start %}

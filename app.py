@@ -3,7 +3,7 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "identifier.sqlite"
+DATABASE = "MTG_Database.sqlite"
 
 def create_connection(db_file):
     try:
@@ -92,6 +92,23 @@ def render_collection():
     print(data_list)
 
     return render_template('full_collection.html', data=data_list)
+
+@app.route('/search', methods=['GET','POST'])
+def render_search():
+    look_up = request.form['Search']
+    title = "Search for: '" + look_up + "' "
+    look_up = "%" + look_up + "%"
+
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE name LIKE ? OR type LIKE ? OR colour LIKE ?"
+    connection = create_connection(DATABASE)
+    cursor = connection.cursor()
+    cursor.execute(query, (look_up, look_up, look_up))
+
+    data_list = cursor.fetchall()
+    print(data_list)
+
+    return render_template('full_collection.html', data=data_list, page_title=title)
+
 
 if __name__ == '__main__':
     app.run()
