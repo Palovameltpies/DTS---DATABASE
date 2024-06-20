@@ -3,7 +3,7 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "MTG_Database.sqlite"
+DATABASE = "identifier.sqlite"
 
 def create_connection(db_file):
     try:
