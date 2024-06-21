@@ -1,56 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Dragons Keep</title>
-    <link rel="stylesheet" type="text/css" href="static/CSS/styles.css"/>
-</head>
+{% extends 'base.html' %}
 
-<body style="background-color: #494848">
-    <div class="header">
-        <form method="post" action="/search">
-            <a href = "/">Dragons Keep</a>
-            <input type="text" name="Search" id="searchbar">
-            <input type="submit" value="Search!" id="searchbar">
-        </form>
-    </div>
-
-    <div id="Nav">
-        <a href = "collection">Collection</a>
-        <a href = "black"><img src="/static/images/black.png"></a>
-        <a href = "blue"><img src="/static/images/blue.png"></a>
-        <a href = "green"><img src="/static/images/green.png"></a>
-        <a href = "white"><img src="/static/images/white.png"></a>
-        <a href = "red"> <img src="/static/images/red.png"></a>
-    </div>
-    <div id="collection_table">
-        <table>
-
-            <thead>
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Power</td>
+                <td>Toughness</td>
+                <td>Stock</td>
+                <td>Price</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
                 <tr>
-                    <td>Name</td>
-                    <td>Type</td>
-                    <td>Power</td>
-                    <td>Toughness</td>
-                    <td>Stock</td>
-                    <td>Price</td>
+                    <td>  {{  row[0] }}  </td>
+                    <td>  {{  row[1] }}  </td>
+                    <td>  {{  row[2] }}  </td>
+                    <td>  {{  row[3] }}  </td>
+                    <td>  {{  row[4] }}  </td>
+                    <td>  ${{  row[5] }}</td>
                 </tr>
-            </thead>
-            <tbody>
-
-                {% for row in data %}
-                    <tr>
-                        <td>  {{  row[0] }}  </td>
-                        <td>  {{  row[1] }}  </td>
-                        <td>  {{  row[2] }}  </td>
-                        <td>  {{  row[3] }}  </td>
-                        <td>  {{  row[4] }}  </td>
-                        <td>  ${{  row[5] }}</td>
-                    </tr>
-                {% endfor %}
-
-            </tbody>
-        </table>
-    </div>
-</body>
-</html>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

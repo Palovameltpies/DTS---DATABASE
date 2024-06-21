@@ -13,7 +13,11 @@ img {
 	width: 35px;
 }
 
-
+img:hover {
+	width : 1.1em;
+	transition: width 0.1s;
+	transition-timing-function: ease-in-out;
+}
 #Nav {
     position:relative;
 	top:5px;
@@ -35,27 +39,15 @@ img {
 	top:10px;
 	left:0;
 	width:99%;
-	height:800px;
-	z-index:1;
-	margin:auto;
-	border:#636363 2px solid;
-	background-color:#909090;
-
-
-}
-
-
-#collection_table{
-	position:relative;
-	top:10px;
-	left:0;
-	width:99%;
 	height:relative;
 	z-index:1;
 	margin:auto;
 	border:#636363 2px solid;
 	background-color:#909090;
+
+
 }
+
 
 
 a {
@@ -103,5 +95,6 @@ a:hover {
   	font-size: 17px;
 
  }
+
 
 
