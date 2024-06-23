@@ -3,10 +3,18 @@
   margin:auto;
   width: 99%;
   text-align: center;
-  background: #636363;
+  background: #2B7A68;
   color: white;
   font-size: 50px;
 
+}
+
+h2 {
+	color: white;
+}
+
+p {
+	color: white;
 }
 
 img {
@@ -20,13 +28,13 @@ img:hover {
 }
 #Nav {
     position:relative;
-	top:5px;
+	top:0;
 	left:0;
 	width: 99%;
 	height:50px;
 	z-index:1;
 	margin:auto;
-	background:#636363;
+	background:#3AAFA9;
 	text-align:center;
 	word-spacing:1px;
 	font-size: 35px;
@@ -42,8 +50,8 @@ img:hover {
 	height:relative;
 	z-index:1;
 	margin:auto;
-	border:#636363 2px solid;
-	background-color:#909090;
+	border:#2B7A68 2px solid;
+	background-color:#3AAFA9;
 
 
 }
@@ -51,8 +59,8 @@ img:hover {
 
 
 a {
-  	font-family:Georgia;
-	color:#d4d4d4;
+  	font-family:Arial;
+	color:#FFFFFF;
 	text-decoration: none;
 }
 a:hover {
@@ -63,22 +71,19 @@ a:hover {
 }
 
  table {
-     border: 2px solid #ffffff;
+     border: 2px solid #DEF2F1;
      width: 100%;
      border-collapse: collapse;
  }
 
  th, td {
 
-     border: 1px solid #ffffff;
+     border: 1px solid #DEF2F1;
      padding: 5px;
 	 font-size: 25px;
+	 colour : #FFFFFF;
  }
 
- th {
-     color: #000000;
-     background-color: #999999;
- }
  form {
     color: #dddddd;
     text-decoration: none;

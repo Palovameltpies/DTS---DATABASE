@@ -22,7 +22,7 @@ def render_home():
 
 @app.route('/black')
 def render_black():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ?"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ? AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, ("Black",))
@@ -34,7 +34,7 @@ def render_black():
 
 @app.route('/blue')
 def render_blue():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ?"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ? AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, ("Blue",))
@@ -46,7 +46,7 @@ def render_blue():
 
 @app.route('/red')
 def render_red():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ?"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ? AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, ("Red",))
@@ -58,7 +58,7 @@ def render_red():
 
 @app.route('/green')
 def render_green():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ?"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ? AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, ("Green",))
@@ -70,7 +70,7 @@ def render_green():
 
 @app.route('/white')
 def render_white():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ?"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE WHERE colour = ? AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, ("White",))
@@ -84,7 +84,7 @@ def render_white():
 @app.route('/collection')
 
 def render_collection():
-    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE"
+    query = "SELECT name, type, power, toughness, stock, price FROM MTG_DATABASE AND stock>0"
     connection = create_connection(DATABASE)
     cursor = connection.cursor()
     cursor.execute(query, )
