@@ -52,11 +52,28 @@ img:hover {
 	margin:auto;
 	border:#2B7A68 2px solid;
 	background-color:#3AAFA9;
+}
 
+.Black_Table{
+	background-color: #454a55
 
 }
 
+.Blue_Table {
+	background-color: #49a9e5
+}
 
+.Green_Table {
+	background-color: #7dde47
+}
+
+.White_Table {
+	background-color: #e0cb58
+}
+
+.Red_Table {
+	background-color: #ee5d5d
+}
 
 a {
   	font-family:Arial;
@@ -81,8 +98,9 @@ a:hover {
      border: 1px solid #DEF2F1;
      padding: 5px;
 	 font-size: 25px;
-	 colour : #FFFFFF;
  }
+
+
 
  form {
     color: #dddddd;
