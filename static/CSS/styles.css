@@ -55,28 +55,27 @@ img:hover {
 }
 
 .Black_Table{
-	background-color: #454a55
-
+	background-color: #454a55;
 }
 
 .Blue_Table {
-	background-color: #49a9e5
+	background-color: #49a9e5;
 }
 
 .Green_Table {
-	background-color: #7dde47
+	background-color: #7dde47;
 }
 
 .White_Table {
-	background-color: #e0cb58
+	background-color: #e0cb58;
 }
 
 .Red_Table {
-	background-color: #ee5d5d
+	background-color: #ee5d5d;
 }
 
 a {
-  	font-family:Arial;
+  	font-family:arial;
 	color:#FFFFFF;
 	text-decoration: none;
 }
@@ -91,6 +90,8 @@ a:hover {
      border: 2px solid #DEF2F1;
      width: 100%;
      border-collapse: collapse;
+	 color:#FFFFFF
+
  }
 
  th, td {
