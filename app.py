@@ -108,7 +108,12 @@ def render_search():
     data_list = cursor.fetchall()
     print(data_list)
 
-    return render_template('full_collection.html', data=data_list, page_title=title)
+    if data_list == []:
+        print("No values")
+        e = "NO VALUES"
+    else:
+        e=""
+    return render_template('full_collection.html', data=data_list, page_title=title, no_values=e)
 
 
 if __name__ == '__main__':
