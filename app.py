@@ -3,7 +3,7 @@ import sqlite3
 from sqlite3 import Error
 
 app = Flask(__name__)
-DATABASE = "MTG_Database.sqlite"
+DATABASE = "identifier.sqlite"
 
 def create_connection(db_file):
     try:
@@ -108,12 +108,25 @@ def render_search():
     data_list = cursor.fetchall()
     print(data_list)
 
+    if look_up == "%" + "Blue" + "%" or look_up == "%" + "blue" "%":
+        search_colour = "Blue_Table"
+    elif look_up == "%" + "Black" + "%" or look_up == "%" + "black" "%":
+        search_colour = "Black_Table"
+    elif look_up == "%" + "Red" + "%" or look_up == "%" + "red" "%":
+        search_colour = "Red_Table"
+    elif look_up == "%" + "Green" + "%" or look_up == "%" + "green" "%":
+        search_colour = "Green_Table"
+    elif look_up == "%" + "White" + "%" or look_up == "%" + "white" "%":
+        search_colour = "White_Table"
+    else:
+        search_colour = ""
+
     if data_list == []:
         print("No values")
         e = "NO VALUES"
     else:
         e=""
-    return render_template('full_collection.html', data=data_list, page_title=title, no_values=e)
+    return render_template('full_collection.html', data=data_list, page_title=title, no_values=e,search_colour=search_colour)
 
 
 if __name__ == '__main__':
